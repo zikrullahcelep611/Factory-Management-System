@@ -4,14 +4,14 @@
     "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\FabrikaYonetimSistemi.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\FabrikaYonetimSistemi.Web.csproj": {
+    "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\FabrikaYonetimSistemi.Web.csproj",
-        "projectName": "FabrikaYonetimSistemi.Web",
-        "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\FabrikaYonetimSistemi.Web.csproj",
+        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj",
+        "projectName": "FabrikaYonetimSistemi.Core",
+        "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj",
         "packagesPath": "C:\\Users\\zikru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\obj\\",
+        "outputPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,237 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj",
+        "projectName": "FabrikaYonetimSistemi.Data",
+        "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj",
+        "packagesPath": "C:\\Users\\zikru\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zikru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj": {
+                "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj",
+        "projectName": "FabrikaYonetimSistemi.Entity",
+        "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj",
+        "packagesPath": "C:\\Users\\zikru\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zikru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj": {
+                "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\FabrikaYonetimSistemi.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\FabrikaYonetimSistemi.Web.csproj",
+        "projectName": "FabrikaYonetimSistemi.Web",
+        "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\FabrikaYonetimSistemi.Web.csproj",
+        "packagesPath": "C:\\Users\\zikru\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\zikru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj": {
+                "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

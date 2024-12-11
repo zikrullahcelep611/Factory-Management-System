@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FabrikaYonetimSistemi.Entity/1.0.0": {
+        "dependencies": {
+          "FabrikaYonetimSistemi.Core": "1.0.0"
+        },
+        "runtime": {
+          "FabrikaYonetimSistemi.Entity.dll": {}
+        }
+      },
+      "FabrikaYonetimSistemi.Core/1.0.0": {
+        "runtime": {
+          "FabrikaYonetimSistemi.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FabrikaYonetimSistemi.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FabrikaYonetimSistemi.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

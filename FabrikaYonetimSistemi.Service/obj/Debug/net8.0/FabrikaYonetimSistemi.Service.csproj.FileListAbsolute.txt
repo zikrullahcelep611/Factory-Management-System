@@ -1,0 +1,12 @@
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\bin\Debug\net8.0\FabrikaYonetimSistemi.Service.deps.json
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\bin\Debug\net8.0\FabrikaYonetimSistemi.Service.dll
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\bin\Debug\net8.0\FabrikaYonetimSistemi.Service.pdb
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\FabrikaYonetimSistemi.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\FabrikaYonetimSistemi.Service.AssemblyInfoInputs.cache
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\FabrikaYonetimSistemi.Service.AssemblyInfo.cs
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\FabrikaYonetimSistemi.Service.csproj.CoreCompileInputs.cache
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\FabrikaYonetimSistemi.Service.sourcelink.json
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\FabrikaYonetimSistemi.Service.dll
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\refint\FabrikaYonetimSistemi.Service.dll
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\FabrikaYonetimSistemi.Service.pdb
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\ref\FabrikaYonetimSistemi.Service.dll

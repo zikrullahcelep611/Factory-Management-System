@@ -1,0 +1,4 @@
+
+Eklenecek Ozellikler:
+
+Bir bina silindigi zaman altindaki malzeme ve deponunda silinmesi gerekir.

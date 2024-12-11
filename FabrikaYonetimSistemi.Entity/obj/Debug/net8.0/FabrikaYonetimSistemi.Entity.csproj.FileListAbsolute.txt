@@ -1,0 +1,16 @@
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\bin\Debug\net8.0\FabrikaYonetimSistemi.Entity.deps.json
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\bin\Debug\net8.0\FabrikaYonetimSistemi.Entity.dll
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\bin\Debug\net8.0\FabrikaYonetimSistemi.Entity.pdb
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\bin\Debug\net8.0\FabrikaYonetimSistemi.Core.dll
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\bin\Debug\net8.0\FabrikaYonetimSistemi.Core.pdb
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\FabrikaYonetimSistemi.Entity.csproj.AssemblyReference.cache
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\FabrikaYonetimSistemi.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\FabrikaYonetimSistemi.Entity.AssemblyInfoInputs.cache
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\FabrikaYonetimSistemi.Entity.AssemblyInfo.cs
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\FabrikaYonetimSistemi.Entity.csproj.CoreCompileInputs.cache
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\FabrikaYonetimSistemi.Entity.sourcelink.json
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\FabrikaY.4C1DA9CD.Up2Date
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\FabrikaYonetimSistemi.Entity.dll
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\refint\FabrikaYonetimSistemi.Entity.dll
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\FabrikaYonetimSistemi.Entity.pdb
+C:\Users\zikru\Desktop\DotNET Projects\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Entity\obj\Debug\net8.0\ref\FabrikaYonetimSistemi.Entity.dll
