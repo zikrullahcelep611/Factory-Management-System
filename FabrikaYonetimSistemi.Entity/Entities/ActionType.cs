@@ -2,8 +2,8 @@
 {
     public enum ActionType
     {
-        Create = 1,
-        Delete = 2,
+        Add = 1,
+        Remove = 2,
         Update = 3
     }
 }

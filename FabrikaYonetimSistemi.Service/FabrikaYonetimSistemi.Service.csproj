@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FabrikaYonetimSistemi.Core\FabrikaYonetimSistemi.Core.csproj" />
+    <ProjectReference Include="..\FabrikaYonetimSistemi.Entity\FabrikaYonetimSistemi.Entity.csproj" />
+  </ItemGroup>
+
 </Project>
