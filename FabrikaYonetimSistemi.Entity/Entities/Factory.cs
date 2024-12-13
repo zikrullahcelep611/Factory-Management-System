@@ -8,6 +8,6 @@ namespace FabrikaYonetimSistemi.Entity.Entities
         public string Location { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        public ICollection<Building> Buildings { get; set; }
+        public ICollection<Building> Buildings { get; set; } = new List<Building>();
     }
 }
