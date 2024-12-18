@@ -29,14 +29,14 @@ namespace FabrikaYonetimSistemi.Data.DataContext
                 .HasMany(b => b.Storages).WithOne(s => s.Building)
                 .HasForeignKey(s => s.BuildingId);
 
-            modelBuilder.Entity<MaterialTransaction>()
+           /* modelBuilder.Entity<MaterialTransaction>()
                 .HasOne(mt => mt.Material).WithMany(m => m.MaterialTransactions)
                 .HasForeignKey(m => m.MaterialId);
 
             modelBuilder.Entity<MaterialTransaction>()
                 .HasOne(mt => mt.Personnel)
                 .WithMany(p => p.MaterialTransactions)
-                .HasForeignKey(mt => mt.PersonelId);
+                .HasForeignKey(mt => mt.PersonelId);*/
         }
     }
 }

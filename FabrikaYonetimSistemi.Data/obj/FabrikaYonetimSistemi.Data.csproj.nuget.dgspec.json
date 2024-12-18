@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj": {}
+    "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj": {
+    "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj",
+        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj",
         "projectName": "FabrikaYonetimSistemi.Core",
-        "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj",
+        "projectPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj",
         "packagesPath": "C:\\Users\\zikru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\obj\\",
+        "outputPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj": {
+    "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj",
+        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj",
         "projectName": "FabrikaYonetimSistemi.Data",
-        "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj",
+        "projectPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj",
         "packagesPath": "C:\\Users\\zikru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\obj\\",
+        "outputPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj": {
-                "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj"
+              "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj": {
+                "projectPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj"
               }
             }
           }
@@ -154,14 +154,14 @@
         }
       }
     },
-    "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj": {
+    "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj",
         "projectName": "FabrikaYonetimSistemi.Entity",
-        "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj",
+        "projectPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj",
         "packagesPath": "C:\\Users\\zikru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\obj\\",
+        "outputPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -182,8 +182,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj": {
-                "projectPath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj"
+              "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj": {
+                "projectPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj"
               }
             }
           }

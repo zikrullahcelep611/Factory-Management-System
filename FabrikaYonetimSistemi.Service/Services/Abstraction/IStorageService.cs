@@ -8,7 +8,7 @@ namespace FabrikaYonetimSistemi.Service.Services.Abstraction
         Task<IEnumerable<Storage>> GetAllStoragesAsync();
         Task AddStorageAsync(Storage storage);
         void UpdateStorage(Storage storage);
-        Task DeleteStorageAsync(int id);
+        Task DeleteStorageAsync(Storage storage);
         Task<ICollection<Material>> GetMaterialsInStorageAsync(int storageId);
     }
 }

@@ -64,7 +64,8 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
@@ -83,15 +84,7 @@ namespace FabrikaYonetimSistemi.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StorageId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("StorageId");
 
                     b.ToTable("Materials");
                 });
@@ -104,26 +97,26 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Action")
+                    b.Property<int>("PersonnelId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<int>("QuantityChange")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StorageMaterialId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TransactionDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MaterialId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PersonelId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
+                    b.Property<int>("TransactionType")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MaterialId");
+                    b.HasIndex("PersonnelId");
 
-                    b.HasIndex("PersonelId");
+                    b.HasIndex("StorageMaterialId");
 
                     b.ToTable("MaterialTransactions");
                 });
@@ -180,6 +173,32 @@ namespace FabrikaYonetimSistemi.Data.Migrations
                     b.ToTable("Storages");
                 });
 
+            modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.StorageMaterial", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MaterialId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StorageId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaterialId");
+
+                    b.HasIndex("StorageId");
+
+                    b.ToTable("StorageMaterial");
+                });
+
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Building", b =>
                 {
                     b.HasOne("FabrikaYonetimSistemi.Entity.Entities.Factory", "Factory")
@@ -191,34 +210,23 @@ namespace FabrikaYonetimSistemi.Data.Migrations
                     b.Navigation("Factory");
                 });
 
-            modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Material", b =>
-                {
-                    b.HasOne("FabrikaYonetimSistemi.Entity.Entities.Storage", "Storage")
-                        .WithMany("Materials")
-                        .HasForeignKey("StorageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Storage");
-                });
-
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.MaterialTransaction", b =>
                 {
-                    b.HasOne("FabrikaYonetimSistemi.Entity.Entities.Material", "Material")
-                        .WithMany("MaterialTransactions")
-                        .HasForeignKey("MaterialId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("FabrikaYonetimSistemi.Entity.Entities.Personnel", "Personnel")
                         .WithMany("MaterialTransactions")
-                        .HasForeignKey("PersonelId")
+                        .HasForeignKey("PersonnelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Material");
+                    b.HasOne("FabrikaYonetimSistemi.Entity.Entities.StorageMaterial", "StorageMaterial")
+                        .WithMany("MaterialTransactions")
+                        .HasForeignKey("StorageMaterialId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Personnel");
+
+                    b.Navigation("StorageMaterial");
                 });
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Storage", b =>
@@ -230,6 +238,25 @@ namespace FabrikaYonetimSistemi.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Building");
+                });
+
+            modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.StorageMaterial", b =>
+                {
+                    b.HasOne("FabrikaYonetimSistemi.Entity.Entities.Material", "Material")
+                        .WithMany("StorageMaterials")
+                        .HasForeignKey("MaterialId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FabrikaYonetimSistemi.Entity.Entities.Storage", "Storage")
+                        .WithMany("StorageMaterials")
+                        .HasForeignKey("StorageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Material");
+
+                    b.Navigation("Storage");
                 });
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Building", b =>
@@ -244,7 +271,7 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Material", b =>
                 {
-                    b.Navigation("MaterialTransactions");
+                    b.Navigation("StorageMaterials");
                 });
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Personnel", b =>
@@ -254,7 +281,12 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Storage", b =>
                 {
-                    b.Navigation("Materials");
+                    b.Navigation("StorageMaterials");
+                });
+
+            modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.StorageMaterial", b =>
+                {
+                    b.Navigation("MaterialTransactions");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,6 +9,7 @@
       "FabrikaYonetimSistemi.Web/1.0.0": {
         "dependencies": {
           "FabrikaYonetimSistemi.Data": "1.0.0",
+          "FabrikaYonetimSistemi.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "7.0.0"
         },
         "runtime": {
@@ -638,6 +639,19 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "FabrikaYonetimSistemi.Service/1.0.0": {
+        "dependencies": {
+          "FabrikaYonetimSistemi.Core": "1.0.0",
+          "FabrikaYonetimSistemi.Entity": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0"
+        },
+        "runtime": {
+          "FabrikaYonetimSistemi.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1120,6 +1134,11 @@
       "sha512": ""
     },
     "FabrikaYonetimSistemi.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FabrikaYonetimSistemi.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -249,6 +249,170 @@
       ]
     },
     {
+      "Route": "js/deleteBuilding.j95ygziqmi.js",
+      "AssetFile": "js/deleteBuilding.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "815"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ZSJvOeCJFn/UIuyEYoraVSnpeMa/x1zJ8EJyeOZBrg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 19:22:54 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j95ygziqmi"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2ZSJvOeCJFn/UIuyEYoraVSnpeMa/x1zJ8EJyeOZBrg="
+        },
+        {
+          "Name": "label",
+          "Value": "js/deleteBuilding.js"
+        }
+      ]
+    },
+    {
+      "Route": "js/deleteBuilding.js",
+      "AssetFile": "js/deleteBuilding.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "815"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ZSJvOeCJFn/UIuyEYoraVSnpeMa/x1zJ8EJyeOZBrg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 17 Dec 2024 19:22:54 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2ZSJvOeCJFn/UIuyEYoraVSnpeMa/x1zJ8EJyeOZBrg="
+        }
+      ]
+    },
+    {
+      "Route": "js/deleteStorage.js",
+      "AssetFile": "js/deleteStorage.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ILHr+Gr3pInlWhUsQCZHpEi6XJB0D+0AU89cX8ppzW8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Dec 2024 08:52:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ILHr+Gr3pInlWhUsQCZHpEi6XJB0D+0AU89cX8ppzW8="
+        }
+      ]
+    },
+    {
+      "Route": "js/deleteStorage.s1m9vu89zq.js",
+      "AssetFile": "js/deleteStorage.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ILHr+Gr3pInlWhUsQCZHpEi6XJB0D+0AU89cX8ppzW8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Dec 2024 08:52:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s1m9vu89zq"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ILHr+Gr3pInlWhUsQCZHpEi6XJB0D+0AU89cX8ppzW8="
+        },
+        {
+          "Name": "label",
+          "Value": "js/deleteStorage.js"
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "js/site.js",
       "Selectors": [],

@@ -10,6 +10,6 @@ namespace FabrikaYonetimSistemi.Entity.Entities
         public int BuildingId { get; set; }
         public Building Building { get; set; }
 
-        public ICollection<Material> Materials { get; set; }
+        public ICollection<StorageMaterial> StorageMaterials { get; set; } = new List<StorageMaterial>();
     }
 }

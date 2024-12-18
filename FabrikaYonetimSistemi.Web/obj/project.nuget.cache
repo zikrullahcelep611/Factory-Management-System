@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dHF00El0TZk=",
+  "dgSpecHash": "InU1353mT0w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\zikru\\Desktop\\DotNET Projects\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\FabrikaYonetimSistemi.Web.csproj",
+  "projectFilePath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Web\\FabrikaYonetimSistemi.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zikru\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\zikru\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -71,12 +71,5 @@
     "C:\\Users\\zikru\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\zikru\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    }
-  ]
+  "logs": []
 }

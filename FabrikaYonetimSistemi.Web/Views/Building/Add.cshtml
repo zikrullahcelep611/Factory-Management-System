@@ -1,0 +1,47 @@
+﻿@model FabrikaYonetimSistemi.Entity.Entities.Building
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>Yeni Bina Ekle</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Add" asp-controller="Building" method="post" class="needs-validation" novalidate>
+                        <!-- Name Field -->
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-bold">Bina Adı</label>
+                            <input asp-for="Name" class="form-control" placeholder="Enter building name" required />
+                            <div class="invalid-feedback">
+                                Lütfen bina ismi giriniz.
+                            </div>
+                        </div>
+
+                        <!-- Factory Selection -->
+                        <div class="mb-3">
+                            <label for="factorySelect" class="form-label fw-bold">Fabrika Seç</label>
+                            <select class="form-select" id="factorySelect" asp-for="FactoryId" required>
+                                <option value="" disabled selected>-- Fabrika Seç --</option>
+                                @foreach (var factory in ViewBag.Factories)
+                                {
+                                    <option value="@factory.Id">@factory.Name</option>
+                                }
+                            </select>
+                            <div class="invalid-feedback">
+                                Lütfen fabrika seçin.
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-plus-circle"></i> Fabrika Ekle
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

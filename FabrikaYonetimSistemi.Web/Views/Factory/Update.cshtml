@@ -1,0 +1,43 @@
+﻿@model FabrikaYonetimSistemi.Entity.Entities.Factory
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>Fabrikayı Güncelle</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Update" asp-controller="Factory" method="post" class="needs-validation" novalidate>
+                        <input type="hidden" asp-for="Id" />
+
+                        <!-- Name Field -->
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-bold"></label>
+                            <input asp-for="Name" class="form-control" placeholder="Fabrika adını giriniz" required />
+                            <div class="invalid-feedback">
+                                Lütfen fabrika adını sağlayın.
+                            </div>
+                        </div>
+
+                        <!-- Location Field -->
+                        <div class="mb-3">
+                            <label asp-for="Location" class="form-label fw-bold"></label>
+                            <input asp-for="Location" class="form-control" placeholder="Fabrika konumunu giriniz" required />
+                            <div class="invalid-feedback">
+                                Lütfen fabrika konumunu sağlayın.
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-save"></i> Güncelle
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

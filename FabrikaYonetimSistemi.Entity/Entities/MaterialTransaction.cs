@@ -4,14 +4,13 @@ namespace FabrikaYonetimSistemi.Entity.Entities
 {
     public class MaterialTransaction : BaseEntity
     {
-        public ActionType Action { get; set; }
-        public int Quantity { get; set; }
-        public DateTime CreatedAt { get; set; }
-
-        public int PersonelId { get; set; }
+        public int StorageMaterialId { get; set; }
+        public StorageMaterial StorageMaterial {get;set;}
+        public int PersonnelId { get; set; }
         public Personnel Personnel { get; set; }
 
-        public int MaterialId { get; set; }
-        public Material Material { get; set; }
+        public ActionType TransactionType { get; set; }
+        public int QuantityChange { get; set; }
+        public DateTime TransactionDate { get; set; } = DateTime.Now;
     }
 }

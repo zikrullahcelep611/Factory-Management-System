@@ -1,0 +1,57 @@
+﻿@model FabrikaYonetimSistemi.Entity.Entities.Storage
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-white text-center">
+                    <h3>Depoyu Güncelle</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Update" asp-controller="Storage" method="post" class="needs-validation" novalidate>
+                        <!-- Gizli ID Alanı -->
+                        <input type="hidden" asp-for="Id" />
+
+                        <!-- İsim Alanı -->
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-bold">Depo Adı</label>
+                            <input asp-for="Name" class="form-control" placeholder="Depo adını giriniz" required />
+                            <div class="invalid-feedback">
+                                Lütfen depo adını giriniz.
+                            </div>
+                        </div>
+
+                        <!-- Bina Seçimi -->
+                        <div class="mb-3">
+                            <label for="buildingSelect" class="form-label fw-bold">Bina Seçiniz</label>
+                            <select class="form-select" id="buildingSelect" asp-for="BuildingId" required>
+                                <option value="" disabled>-- Bir Bina Seçiniz --</option>
+                                @foreach (var building in ViewBag.Buildings)
+                                {
+                                    if (building.Id == Model.BuildingId)
+                                    {
+                                        <option value="@building.Id" selected>@building.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@building.Id">@building.Name</option>
+                                    }
+                                }
+                            </select>
+                            <div class="invalid-feedback">
+                                Lütfen bir bina seçiniz.
+                            </div>
+                        </div>
+
+                        <!-- Güncelleme Butonu -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-warning">
+                                <i class="bi bi-pencil-square"></i> Depoyu Güncelle
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

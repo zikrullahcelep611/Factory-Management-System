@@ -1,4 +1,9 @@
+using FabrikaYonetimSistemi.Core.Repository;
+using FabrikaYonetimSistemi.Data.Abstraction;
 using FabrikaYonetimSistemi.Data.DataContext;
+using FabrikaYonetimSistemi.Entity.Entities;
+using FabrikaYonetimSistemi.Service.Services.Abstraction;
+using FabrikaYonetimSistemi.Service.Services.Concrete;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +15,13 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IBuildingService, BuildingService>();
+builder.Services.AddScoped<IRepository<Building>, Repository<Building>>();
+builder.Services.AddScoped<IFactoryService, FactoryService>();
+builder.Services.AddScoped<IRepository<Factory>, Repository<Factory>>();
+builder.Services.AddScoped<IStorageService, StorageService>();
+builder.Services.AddScoped<IRepository<Storage>, Repository<Storage>>();
 
 var app = builder.Build();
 
