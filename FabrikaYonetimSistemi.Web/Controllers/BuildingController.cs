@@ -1,81 +1,93 @@
 ﻿using FabrikaYonetimSistemi.Entity.Entities;
 using FabrikaYonetimSistemi.Service.Services.Abstraction;
+using FabrikaYonetimSistemi.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
-[Route("api/[controller]")]
-[ApiController]
-public class BuildingController : ControllerBase
+[Route("building")]
+public class BuildingController : Controller
 {
     private readonly IBuildingService _buildingService;
+    private readonly IFactoryService _factoryService;
 
-    public BuildingController(IBuildingService buildingService)
+    public BuildingController(IBuildingService buildingService, IFactoryService factoryService)
     {
         _buildingService = buildingService;
+        _factoryService = factoryService;
     }
 
-    // GET: api/Building
-    [HttpGet]
-    public async Task<IActionResult> GetAllBuildings()
+    [HttpGet("")]
+    public async Task<IActionResult> Index()
     {
         var buildings = await _buildingService.GetAllBuildingsAsync();
-        return Ok(buildings);
-    }
 
-    // GET: api/Building/{id}
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetBuildingById(int id)
-    {
-        var building = await _buildingService.GetBuildingByIdAsync(id);
-        if (building == null)
+        var buildingViewModels = buildings.Select(building => new BuildingViewModel
         {
-            return NotFound($"Building with ID {id} not found.");
-        }
-        return Ok(building);
+            Id = building.Id,
+            Name = building.Name,
+            Factory = building.Factory
+        }).ToList();
+
+        return View(buildingViewModels);
     }
 
-    // GET: api/Building/factory/{factoryId}
-    [HttpGet("factory/{factoryId}")]
-    public async Task<IActionResult> GetBuildingsByFactoryId(int factoryId)
+    [HttpGet("add")]
+    public async Task<IActionResult> Add()
     {
-        var buildings = await _buildingService.GetBuildingsByFactoryIdAsync(factoryId);
-        return Ok(buildings);
+        var factories = await _factoryService.GetAllFactoriesAsync();
+
+        ViewBag.Factories = factories;
+
+        return View();
     }
 
-    // POST: api/Building
-    [HttpPost]
-    public async Task<IActionResult> AddBuilding([FromBody] Building building)
+    [HttpPost("add")]
+    public async Task<IActionResult> Add(Building building)
     {
         if (building == null)
         {
-            return BadRequest("Building data is required.");
+            ModelState.AddModelError("", "Building data is required.");
+            return View(building);
         }
 
         var isUnique = await _buildingService.IsBuildingNameUniqueAsync(building.Name);
         if (!isUnique)
         {
-            return BadRequest($"A building with the name '{building.Name}' already exists.");
+            ModelState.AddModelError("", $"A building with the name '{building.Name}' already exists.");
+            return View(building);
         }
 
         await _buildingService.AddBuildingAsync(building);
-        return CreatedAtAction(nameof(GetBuildingById), new { id = building.Id }, building);
+        return RedirectToAction("");
     }
 
-    // PUT: api/Building/{id}
-    [HttpPut("{id}")]
-    public IActionResult UpdateBuilding(int id, [FromBody] Building building)
+    [HttpGet("update/{id}")]
+    public async Task<IActionResult> Update(int id)
     {
-        if (building == null || building.Id != id)
+        var building = await _buildingService.GetBuildingByIdAsync(id);
+
+        if (building == null)
+            return NotFound();
+        ViewBag.Factories = await _factoryService.GetAllFactoriesAsync();
+
+        return View(building);
+    }
+
+    [HttpPost("update/{id}")]
+    public async Task<IActionResult> Update(Building building)
+    {
+        ModelState.Remove("Factory");
+        if (ModelState.IsValid)
         {
-            return BadRequest("Invalid building data.");
+            _buildingService.UpdateBuilding(building);
+            return RedirectToAction("");
         }
 
-        _buildingService.UpdateBuilding(building);
-        return NoContent();
+        ViewBag.Factories = await _factoryService.GetAllFactoriesAsync();
+        return View(building);
     }
 
-    // DELETE: api/Building/{id}
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteBuilding(int id)
+    [HttpDelete("delete/{id}")]
+    public async Task<IActionResult> Delete(int id)
     {
         var building = await _buildingService.GetBuildingByIdAsync(id);
         if (building == null)

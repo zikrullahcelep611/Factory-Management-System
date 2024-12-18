@@ -2,8 +2,7 @@
 using FabrikaYonetimSistemi.Service.Services.Abstraction;
 using Microsoft.AspNetCore.Mvc;
 
-[Route("api/[controller]")]
-[ApiController]
+[Route("material")]
 public class MaterialController : ControllerBase
 {
     private readonly IMaterialService _materialService;
@@ -13,7 +12,7 @@ public class MaterialController : ControllerBase
         _materialService = materialService;
     }
 
-    // GET: api/Material
+
     [HttpGet]
     public async Task<IActionResult> GetAllMaterials()
     {
@@ -21,7 +20,6 @@ public class MaterialController : ControllerBase
         return Ok(materials);
     }
 
-    // GET: api/Material/{id}
     [HttpGet("{id}")]
     public async Task<IActionResult> GetMaterialById(int id)
     {
@@ -33,7 +31,7 @@ public class MaterialController : ControllerBase
         return Ok(material);
     }
 
-    // POST: api/Material
+
     [HttpPost]
     public async Task<IActionResult> AddMaterial([FromBody] Material material)
     {
@@ -46,7 +44,7 @@ public class MaterialController : ControllerBase
         return CreatedAtAction(nameof(GetMaterialById), new { id = material.Id }, material);
     }
 
-    // PUT: api/Material/{id}
+
     [HttpPut("{id}")]
     public IActionResult UpdateMaterial(int id, [FromBody] Material material)
     {
@@ -59,7 +57,7 @@ public class MaterialController : ControllerBase
         return NoContent();
     }
 
-    // DELETE: api/Material/{id}
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteMaterial(int id)
     {
@@ -73,7 +71,7 @@ public class MaterialController : ControllerBase
         return NoContent();
     }
 
-    // PATCH: api/Material/{id}/increase
+
     [HttpPatch("{id}/increase")]
     public async Task<IActionResult> IncreaseMaterialQuantity(int id, [FromQuery] int amount)
     {
@@ -93,7 +91,7 @@ public class MaterialController : ControllerBase
         }
     }
 
-    // PATCH: api/Material/{id}/reduce
+
     [HttpPatch("{id}/reduce")]
     public async Task<IActionResult> ReduceMaterialQuantity(int id, [FromQuery] int amount)
     {

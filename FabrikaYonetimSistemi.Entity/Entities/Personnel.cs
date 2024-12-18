@@ -9,6 +9,6 @@ namespace FabrikaYonetimSistemi.Entity.Entities
         public bool Role { get; set; }
         public DateTime CreatedAt { get; set; }
 
-        public ICollection<MaterialTransaction> MaterialTransactions { get; set; }
+        public ICollection<MaterialTransaction> MaterialTransactions { get; set; } = new List<MaterialTransaction>();
     }
 }

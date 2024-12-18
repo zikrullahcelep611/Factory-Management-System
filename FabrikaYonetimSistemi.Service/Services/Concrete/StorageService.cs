@@ -1,9 +1,10 @@
 ﻿using FabrikaYonetimSistemi.Core.Repository;
 using FabrikaYonetimSistemi.Entity.Entities;
+using FabrikaYonetimSistemi.Service.Services.Abstraction;
 
 namespace FabrikaYonetimSistemi.Service.Services.Concrete
 {
-    public class StorageService
+    public class StorageService : IStorageService
     {
         private readonly IRepository<Storage> _storageRepository;
 
@@ -26,7 +27,7 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
         // Get all Storages
         public async Task<IEnumerable<Storage>> GetAllStoragesAsync()
         {
-            return await _storageRepository.GetAllAsync();
+            return await _storageRepository.GetAllAsync(s => s.Building);
         }
 
         // Add new Storage
@@ -37,7 +38,6 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
                 throw new ArgumentNullException(nameof(storage));
             }
 
-            storage.CreatedAt = DateTime.UtcNow;
             await _storageRepository.AddAsync(storage);
         }
 
@@ -53,29 +53,19 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
         }
 
         // Delete Storage by ID
-        public async Task DeleteStorageAsync(int id)
+        public async Task DeleteStorageAsync(Storage storage)
         {
-            var storage = await _storageRepository.GetByIdAsync(id);
             if (storage == null)
             {
-                throw new Exception($"Storage with ID {id} not found.");
+                throw new ArgumentNullException(nameof(storage));
             }
 
             _storageRepository.Delete(storage);
         }
 
-        // Get Materials in a Storage
-        public async Task<ICollection<Material>> GetMaterialsInStorageAsync(int storageId)
+        public Task<ICollection<Material>> GetMaterialsInStorageAsync(int storageId)
         {
-            var storage = await GetStorageByIdAsync(storageId);
-            return storage.Materials;
-        }
-
-        // Check if a Storage Exists by ID
-        public async Task<bool> StorageExistsAsync(int id)
-        {
-            var storage = await _storageRepository.GetByIdAsync(id);
-            return storage != null;
+            throw new NotImplementedException();
         }
     }
 }

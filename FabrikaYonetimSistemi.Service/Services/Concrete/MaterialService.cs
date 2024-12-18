@@ -4,7 +4,7 @@ using FabrikaYonetimSistemi.Service.Services.Abstraction;
 
 namespace FabrikaYonetimSistemi.Service.Services.Concrete
 {
-    public class MaterialService : IMaterialService
+    /*public class MaterialService : IMaterialService
     {
         private readonly IRepository<Material> _materialRepository;
 
@@ -105,5 +105,5 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
 
             _materialRepository.Update(material);
         }
-    }
+    }*/
 }

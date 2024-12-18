@@ -9,7 +9,6 @@ namespace FabrikaYonetimSistemi.Entity.Entities
         public int FactoryId { get; set; }
         public Factory Factory { get; set; }
 
-        public ICollection<Storage> Storages { get; set; }
-
+        public ICollection<Storage> Storages { get; set; } = new List<Storage>();
     }
 }

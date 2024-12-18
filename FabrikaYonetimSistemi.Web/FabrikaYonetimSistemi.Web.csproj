@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FabrikaYonetimSistemi.Data\FabrikaYonetimSistemi.Data.csproj" />
+    <ProjectReference Include="..\FabrikaYonetimSistemi.Service\FabrikaYonetimSistemi.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

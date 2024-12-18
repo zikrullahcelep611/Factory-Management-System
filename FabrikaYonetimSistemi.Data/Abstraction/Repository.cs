@@ -1,6 +1,7 @@
 ﻿using FabrikaYonetimSistemi.Core.Repository;
 using FabrikaYonetimSistemi.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace FabrikaYonetimSistemi.Data.Abstraction
 {
@@ -27,9 +28,40 @@ namespace FabrikaYonetimSistemi.Data.Abstraction
             _context.SaveChanges();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync() => await _dbSet.ToListAsync();
+        public IQueryable<T> GetAll(params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = _context.Set<T>();
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                    query = query.Include(include);
+            }
+            return query;
+        }
+
+        public async Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = _dbSet;
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return await query.ToListAsync();
+        }
         
-        public async Task<T> GetByIdAsync(int id) => await _dbSet.FindAsync(id);
+        public async Task<T> GetByIdAsync(int id, params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = _dbSet;
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return await query.FirstOrDefaultAsync(entity => EF.Property<int>(entity, "Id") == id);
+        }
 
         public void Update(T entity)
         {

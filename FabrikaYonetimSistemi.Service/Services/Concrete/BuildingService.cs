@@ -6,7 +6,6 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
 {
     public class BuildingService : IBuildingService
     {
-
         private readonly IRepository<Building> _repository;
 
         public BuildingService(IRepository<Building> repository)
@@ -32,7 +31,7 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
 
         public async Task<IEnumerable<Building>> GetAllBuildingsAsync()
         {
-            return await _repository.GetAllAsync();
+            return await _repository.GetAllAsync(b => b.Factory);
         }
 
         public async Task<Building> GetBuildingByIdAsync(int id)
@@ -40,7 +39,7 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
             if (id < 0)
                 throw new ArgumentException("ID must be greater than 0.", nameof(id));
 
-            return await _repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(id, b => b.Factory);
         }
 
         public async Task<IEnumerable<Building>> GetBuildingsByFactoryIdAsync(int factoryId)
