@@ -1,0 +1,33 @@
+﻿@model FabrikaYonetimSistemi.Entity.Entities.StorageMaterial
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>Malzeme Arttır</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Add" asp-controller="Transaction" method="post" class="needs-validation" novalidate>
+
+                        <!-- Quantity Field -->
+                        <div class="mb-3">
+                            <label asp-for="Quantity" class="form-label fw-bold">Miktar</label>
+                            <input asp-for="Quantity" type="number" class="form-control" placeholder="Miktar giriniz" required />
+                            <div class="invalid-feedback">
+                                Lütfen miktarı giriniz.
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-plus-circle"></i> Malzeme Ekle
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<FabrikaYonetimSistemi.Entity.Entities.StorageMaterial>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="text-primary">Depodaki Malzeme Listesi</h1>
+        <a href="/StorageMaterial/Add" class="btn btn-success">
+            <i class="bi bi-plus-circle"></i> Yeni Malzeme Ekle
+        </a>
+    </div>
+
+    <table class="table table-striped table-hover table-responsive-md">
+        <thead class="table-success">
+            <tr>
+                <th>Id</th>
+                <th>Adı</th>
+                <th>Depo</th>
+                <th>Miktar</th>
+                <th>İşlemler</th>
+                <th>Depo Detayları</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="6" class="text-center text-muted">Henüz herhangi bir fabrika bulunmamaktadır</td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var storageMaterial in Model)
+                {
+                    <tr>
+                        <td>@storageMaterial.Id</td>
+                        <td>@storageMaterial.Material.Name</td>
+                        <td>@storageMaterial.Storage.Name</td>
+                        <td>@storageMaterial.Quantity</td>
+                        <td class="text-center">
+                            <!-- Malzeme Arttır Formu -->
+                            <form action="/StorageMaterial/Update" method="post" class="d-inline">
+                                <input type="hidden" name="materialId" value="@storageMaterial.Id" />
+                                <input type="hidden" name="transactionType" value="Add" />
+                                <div class="input-group input-group-sm" style="max-width: 200px;">
+                                    <input type="number" name="quantity" class="form-control" placeholder="Miktar" required style="width: 80px;" />
+                                    <button type="submit" class="btn btn-warning">
+                                        <i class="bi bi-plus-circle"></i> Arttır
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Malzeme Azalt Formu -->
+                            <form action="/StorageMaterial/Update" method="post" class="d-inline">
+                                <input type="hidden" name="materialId" value="@storageMaterial.Id" />
+                                <input type="hidden" name="transactionType" value="Remove" />
+                                <div class="input-group input-group-sm" style="max-width: 200px;">
+                                    <input type="number" name="quantity" class="form-control" placeholder="Miktar" required style="width: 80px;" />
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="bi bi-dash-circle"></i> Azalt
+                                    </button>
+                                </div>
+                            </form>
+                        </td>
+                        <td class="text-center">
+                            <a href="/StorageMaterial/MaterialList/@storageMaterial.StorageId" class="btn btn-info btn-sm">
+                                <i class="bi bi-eye"></i> Depo Görüntüle
+                            </a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

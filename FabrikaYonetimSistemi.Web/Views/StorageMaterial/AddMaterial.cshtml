@@ -1,0 +1,57 @@
+﻿@{
+    var material = ViewBag.Material as FabrikaYonetimSistemi.Entity.Entities.Material;
+    var storages = ViewBag.Storages as IEnumerable<FabrikaYonetimSistemi.Entity.Entities.Storage>;
+}
+
+<div class="container mt-5">
+    <h3 class="text-center">Malzeme Ekle</h3>
+
+    @if (material == null)
+    {
+        <p class="text-danger text-center">Malzeme bilgisi bulunamadı.</p>
+    }
+    else
+    {
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4>Malzeme: @material.Name</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="AddMaterial" asp-controller="StorageMaterial" method="post">
+                    <input type="hidden" name="materialId" value="@material.Id" />
+
+                    <!-- Depo Seçimi -->
+                    <div class="mb-3">
+                        <label for="storageSelect" class="form-label">Depo Seçiniz</label>
+                        <select class="form-select" id="storageSelect" name="storageId" required>
+                            <option value="" disabled selected>-- Depo Seçiniz --</option>
+                            @foreach (var storage in storages)
+                            {
+                                <option value="@storage.Id">@storage.Name</option>
+                            }
+                        </select>
+                        <div class="invalid-feedback">
+                            Lütfen bir depo seçiniz.
+                        </div>
+                    </div>
+
+                    <!-- Miktar Girişi -->
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Miktar</label>
+                        <input type="number" id="quantity" name="quantity" class="form-control" placeholder="Miktar" required />
+                        <div class="invalid-feedback">
+                            Lütfen miktarı giriniz.
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-plus-circle"></i> Malzeme Ekle
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+</div>

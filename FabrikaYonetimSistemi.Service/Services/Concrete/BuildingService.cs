@@ -1,16 +1,17 @@
 ﻿using FabrikaYonetimSistemi.Core.Repository;
 using FabrikaYonetimSistemi.Entity.Entities;
 using FabrikaYonetimSistemi.Service.Services.Abstraction;
+using Microsoft.EntityFrameworkCore;
 
 namespace FabrikaYonetimSistemi.Service.Services.Concrete
 {
     public class BuildingService : IBuildingService
     {
-        private readonly IRepository<Building> _repository;
+        private readonly IRepository<Building> _buildingRepository;
 
         public BuildingService(IRepository<Building> repository)
         {
-            _repository = repository;
+            _buildingRepository = repository;
         }
 
         public async Task AddBuildingAsync(Building entity)
@@ -18,7 +19,7 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
             if (entity == null)
                 throw new ArgumentNullException(nameof(entity));
 
-            await _repository.AddAsync(entity);
+            await _buildingRepository.AddAsync(entity);
         }
 
         public void DeleteBuilding(Building entity)
@@ -26,12 +27,12 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
             if (entity == null)
                 throw new ArgumentNullException(nameof(entity));
 
-            _repository.Delete(entity);
+            _buildingRepository.Delete(entity);
         }
 
         public async Task<IEnumerable<Building>> GetAllBuildingsAsync()
         {
-            return await _repository.GetAllAsync(b => b.Factory);
+            return await _buildingRepository.GetAllAsync(b => b.Factory);
         }
 
         public async Task<Building> GetBuildingByIdAsync(int id)
@@ -39,7 +40,7 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
             if (id < 0)
                 throw new ArgumentException("ID must be greater than 0.", nameof(id));
 
-            return await _repository.GetByIdAsync(id, b => b.Factory);
+            return await _buildingRepository.GetByIdAsync(id, b => b.Factory);
         }
 
         public async Task<IEnumerable<Building>> GetBuildingsByFactoryIdAsync(int factoryId)
@@ -47,7 +48,7 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
             if (factoryId <= 0)
                 throw new ArgumentException("Factory ID must be greater than 0.", nameof(factoryId));
 
-            var allBuildings = await _repository.GetAllAsync();
+            var allBuildings = await _buildingRepository.GetAllAsync();
             return allBuildings.Where(b => b.FactoryId == factoryId);
         }
 
@@ -56,7 +57,7 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
             if (string.IsNullOrWhiteSpace(buildingName))
                 throw new ArgumentException("Building name cannot be null or whitespace.", nameof(buildingName));
 
-            var allBuildings = await _repository.GetAllAsync();
+            var allBuildings = await _buildingRepository.GetAllAsync();
             return !allBuildings.Any(b => b.Name.Equals(buildingName, StringComparison.OrdinalIgnoreCase));
         }
 
@@ -65,7 +66,20 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
             if (entity == null)
                 throw new ArgumentNullException(nameof(entity));
 
-            _repository.Update(entity);
+            _buildingRepository.Update(entity);
+        }
+
+        public async Task<IEnumerable<Storage>> GetStoragesByBuildingIdAsync(int buildingId)
+        {
+            var building = await _buildingRepository.GetAll(b => b.Storages)
+                .FirstOrDefaultAsync(f => f.Id == buildingId);
+
+            if(building == null)
+            {
+                throw new KeyNotFoundException($"Building with ID {buildingId} not found.");
+            }
+
+            return building.Storages;
         }
     }
 }

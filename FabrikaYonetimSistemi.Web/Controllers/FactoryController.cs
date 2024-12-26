@@ -2,9 +2,11 @@
 using FabrikaYonetimSistemi.Service.Services.Abstraction;
 using Microsoft.AspNetCore.Mvc;
 using FabrikaYonetimSistemi.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FabrikaYonetimSistemi.Web.Controllers
 {
+    [Authorize(Roles = "Admin,Personel")]
     [Route("factory")]
     public class FactoryController : Controller
     {
@@ -28,30 +30,7 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             }).ToList();
 
             return View(factoryViewModels);
-        }
-
-        // Get all factories
-        [HttpGet("all")]
-        public async Task<IActionResult> GetAllFactories()
-        {
-            var factories = await _factoryService.GetAllFactoriesAsync();
-            return Ok(factories);
-        }
-
-        // Get a factory by ID
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetFactoryById(int id)
-        {
-            try
-            {
-                var factory = await _factoryService.GetFactoryByIdAsync(id);
-                return Ok(factory);
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
-        }
+        }     
 
         [HttpGet("add")]
         public IActionResult Add()
@@ -116,24 +95,12 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             }
         }
 
-        [HttpGet("buildings/{factoryId}")]
+        [HttpGet("Buildings/{factoryId}")]
         public async Task<IActionResult> ListBuildings(int factoryId)
-        {
-            try
-            {
-                var buildings = await _factoryService.GetBuildingsByFactoryIdAsync(factoryId);
+        {           
+            var buildings = await _factoryService.GetBuildingsByFactoryIdAsync(factoryId);
 
-                if (buildings == null || !buildings.Any())
-                {
-                    return NotFound($"No buildings found for Factory ID {factoryId}");
-                }
-
-                return View(buildings);
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
+            return View(buildings);
         }
     }
 }

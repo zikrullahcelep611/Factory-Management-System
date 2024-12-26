@@ -1,0 +1,69 @@
+﻿@model FabrikaYonetimSistemi.Entity.Entities.StorageMaterial
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>Yeni İşlem Ekle</h3>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.Materials == null || !((IEnumerable<Material>)ViewBag.Materials).Any())
+                    {
+                        <p class="text-danger text-center">Malzeme eklemeye uygun depo yok. Lütfen yeni depo ekleyiniz.</p>
+                    }
+                    else
+                    {
+                        <form asp-action="Add" asp-controller="StorageMaterial" method="post" class="needs-validation" novalidate>
+                            <!-- Quantity Field -->
+                            <div class="mb-3">
+                                <label asp-for="Quantity" class="form-label fw-bold">Miktar</label>
+                                <input asp-for="Quantity" type="number" class="form-control" placeholder="Miktarı giriniz" required />
+                                <div class="invalid-feedback">
+                                    Lütfen miktarı sağlayınız.
+                                </div>
+                            </div>
+
+                            <!-- Material Selection -->
+                            <div class="mb-3">
+                                <label for="materialSelect" class="form-label fw-bold">Malzeme Seçiniz</label>
+                                <select class="form-select" id="materialSelect" asp-for="MaterialId" required>
+                                    <option value="" disabled selected>-- Bir Malzeme Seçiniz --</option>
+                                    @foreach (var material in ViewBag.Materials as IEnumerable<Material>)
+                                    {
+                                        <option value="@material.Id">@material.Name</option>
+                                    }
+                                </select>
+                                <div class="invalid-feedback">
+                                    Lütfen bir malzeme seçiniz.
+                                </div>
+                            </div>
+
+                            <!-- Storage Selection -->
+                            <div class="mb-3">
+                                <label for="storageSelect" class="form-label fw-bold">Depo Seçiniz</label>
+                                <select class="form-select" id="storageSelect" asp-for="StorageId" required>
+                                    <option value="" disabled selected>-- Bir Depo Seçiniz --</option>
+                                    @foreach (var storage in ViewBag.Storages as IEnumerable<Storage>)
+                                    {
+                                        <option value="@storage.Id">@storage.Name</option>
+                                    }
+                                </select>
+                                <div class="invalid-feedback">
+                                    Lütfen bir depo seçiniz.
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-plus-circle"></i> İşlem Ekle
+                                </button>
+                            </div>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

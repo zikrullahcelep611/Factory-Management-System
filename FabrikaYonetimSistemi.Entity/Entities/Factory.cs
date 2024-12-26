@@ -11,7 +11,6 @@ namespace FabrikaYonetimSistemi.Entity.Entities
 
         [Required(ErrorMessage = "Location is required")]
         public string Location { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         public ICollection<Building> Buildings { get; set; } = new List<Building>();
     }

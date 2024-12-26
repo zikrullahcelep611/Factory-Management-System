@@ -8,7 +8,7 @@ namespace FabrikaYonetimSistemi.Entity.Entities
         public Storage Storage { get; set; }
         public int MaterialId { get; set; }
         public Material Material { get; set; }
-        public ICollection<MaterialTransaction> MaterialTransactions { get; set; }
+        public ICollection<MaterialTransaction> MaterialTransactions { get; set; } = new List<MaterialTransaction>();
 
         public int Quantity { get; set; }
     }
