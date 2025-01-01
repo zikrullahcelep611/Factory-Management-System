@@ -22,6 +22,11 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
             await _buildingRepository.AddAsync(entity);
         }
 
+        public async Task<Building> GetBuildingByIdAndFactoryIdAsync(int buildingId, int factoryId)
+        {
+            return await _buildingRepository.GetFirstOrDefaultAsync(b => b.Id == buildingId && b.FactoryId == factoryId);
+        }
+
         public void DeleteBuilding(Building entity)
         {
             if (entity == null)

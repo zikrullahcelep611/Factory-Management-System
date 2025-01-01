@@ -1,0 +1,39 @@
+﻿@{
+    var buildingId = ViewBag.BuildingId;
+    var buildingName = ViewBag.BuildingName;
+}
+
+<div class="container mt-5">
+    <h3 class="text-center">Bina: @buildingName</h3>
+
+    <!-- Validasyon Hataları -->
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            <ul>
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            </ul>
+        </div>
+    }
+
+    <!-- Depo Ekleme Formu -->
+    <form asp-action="AddStorageToBuilding" method="post">
+        <input type="hidden" name="buildingId" value="@buildingId" />
+
+        <!-- Depo Adı -->
+        <div class="mb-3">
+            <label for="storageName" class="form-label">Depo Adı</label>
+            <input type="text" id="storageName" name="storageName" class="form-control" placeholder="Depo adını giriniz" required />
+        </div>
+
+        <!-- Submit Butonu -->
+        <div class="d-grid">
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i> Depo Ekle
+            </button>
+        </div>
+    </form>
+</div>

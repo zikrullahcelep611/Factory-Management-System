@@ -32,14 +32,14 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             return View(factoryViewModels);
         }     
 
-        [HttpGet("add")]
+        [HttpGet("Add")]
         public IActionResult Add()
         {
             return View();
         }
 
         // Add a new factory
-        [HttpPost("add")]
+        [HttpPost("Add")]
         public async Task<IActionResult> Add(Factory factory)
         {
             if (ModelState.IsValid)
@@ -50,7 +50,7 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             return RedirectToAction("add");
         }
 
-        [HttpGet("update/{id}")]
+        [HttpGet("Update/{id}")]
         public async Task<IActionResult> Update(int id)
         {
             var factory = await _factoryService.GetFactoryByIdAsync(id);
@@ -62,7 +62,7 @@ namespace FabrikaYonetimSistemi.Web.Controllers
         }
 
         // Update an existing factory
-        [HttpPost("update/{id}")]
+        [HttpPost("Update/{id}")]
         public IActionResult Update(Factory factory)
         {
             if (!ModelState.IsValid)

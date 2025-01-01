@@ -151,6 +151,70 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             return RedirectToAction("");
         }
 
+        [HttpGet("AddMaterialToStorage/{storageId}")]
+        public async Task<IActionResult> AddMaterialToStorage(int storageId)
+        {
+            var storage = await _storageService.GetStorageByIdAsync(storageId);
+
+            if(storage == null)
+            {
+                return NotFound("Depo bulunamadı");
+            }
+
+            var materials = await _materialService.GetAllMaterialsAsync();
+
+            ViewBag.Storage = storage;
+            ViewBag.Materials = materials;
+
+            return View();
+        }
+
+        [HttpPost("AddMaterialToStorage/{storageId}")]
+        public async Task<IActionResult> AddMaterialToStorage(int storageId, int materialId, int quantity)
+        {
+            if (quantity <= 0)
+            {
+                ModelState.AddModelError("", "Miktar sıfırdan büyük olmalıdır.");
+                return RedirectToAction("AddMaterialToStorage", new { storageId });
+            }
+
+            //Seçilen malzemenin seçilen depoya eklenip eklenmediğini kontrol eden metot.
+            var existingStorageMaterial = await _storageMaterialService.GetByMaterialAndStorageAsync(materialId, storageId);
+
+            if (existingStorageMaterial != null)
+            {
+                ModelState.AddModelError("", "Bu malzeme zaten seçilen depoya eklenmiş.");
+                var storage = await _storageService.GetStorageByIdAsync(storageId);
+                var materials = await _materialService.GetAllMaterialsAsync();
+                ViewBag.Storage = storage;
+                ViewBag.Materials = materials;
+                return View("AddMaterialToStorage");
+            }
+
+            var storageMaterial = new StorageMaterial
+            {
+                MaterialId = materialId,
+                StorageId = storageId,
+                Quantity = quantity
+            };
+
+            await _storageMaterialService.AddStorageMaterialAsync(storageMaterial);
+
+            // Transaction kaydı oluştur
+            var transaction = new MaterialTransaction
+            {
+                StorageMaterialId = storageMaterial.Id,
+                QuantityChange = quantity,
+                TransactionType = ActionType.Add,
+                TransactionDate = DateTime.UtcNow,
+                PersonnelId = 0 // Kullanıcı kimliği burada bağlanmalı
+            };
+
+            await _materialTransactionService.AddTransactionAsync(transaction);
+
+            return Redirect($"/StorageMaterial/MaterialList/{storageId}");
+        }
+
         [HttpPost("Update")]
         public async Task<IActionResult> Update(int materialId, int quantity, string transactionType, string returnUrl)
         {
@@ -216,6 +280,23 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             }
 
             return View(storageMaterials);
+        }
+
+        [HttpGet("Search")]
+        public async Task<IActionResult> Search(string query)
+        {
+            // Tüm malzeme ve depo verilerini içeren StorageMaterial sorgusu
+            var storageMaterials = await _storageMaterialService.GetAllStorageMaterialAsync();
+
+            // Arama sorgusu boş değilse filtre uygula
+            if (!string.IsNullOrEmpty(query))
+            {
+                storageMaterials = storageMaterials.Where(sm =>
+                    sm.Material.Name.Contains(query, StringComparison.OrdinalIgnoreCase) ||
+                    sm.Storage.Name.Contains(query, StringComparison.OrdinalIgnoreCase));
+            }
+
+            return View("Index", storageMaterials);
         }
     }
 }

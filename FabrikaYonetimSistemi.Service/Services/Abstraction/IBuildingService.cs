@@ -13,5 +13,6 @@ namespace FabrikaYonetimSistemi.Service.Services.Abstraction
         void UpdateBuilding(Building entity);
         void DeleteBuilding(Building entity);
         Task<IEnumerable<Storage>> GetStoragesByBuildingIdAsync(int buildingId);
+        Task<Building> GetBuildingByIdAndFactoryIdAsync(int buildingId, int factoryId);
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FabrikaYonetimSistemi.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06d59b5d531f34305821c7d210a4f2e6feb2aeb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af996840d7c15ff93ecd69b7974b4537da8ed6d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FabrikaYonetimSistemi.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FabrikaYonetimSistemi.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

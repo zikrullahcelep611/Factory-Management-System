@@ -7,6 +7,11 @@ namespace FabrikaYonetimSistemi.Data.DataContext
 {
     public class AppDbContext : IdentityDbContext<Personnel, IdentityRole<int>, int>
     {
+        public AppDbContext()
+        {
+            
+        }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
             
@@ -18,6 +23,8 @@ namespace FabrikaYonetimSistemi.Data.DataContext
         public DbSet<Personnel> Personnels { get; set; }
         public DbSet<Material> Materials { get; set; }
         public DbSet<MaterialTransaction> MaterialTransactions { get; set; }
+        public DbSet<StorageMaterial> StorageMaterial { get; set; }
+        public DbSet<MaterialRequest> MaterialRequests { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

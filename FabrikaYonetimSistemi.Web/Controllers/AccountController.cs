@@ -18,11 +18,10 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             _signInManager = signInManager;
         }
 
-        [HttpGet("login")]
+        [HttpGet("Login")]
         public IActionResult Login() => View();
-        
 
-        [HttpPost("login")]
+        [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
@@ -31,7 +30,7 @@ namespace FabrikaYonetimSistemi.Web.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("");
                 }
 
                 /*var user = await _userManager.FindByEmailAsync(model.Email);
@@ -123,16 +122,30 @@ namespace FabrikaYonetimSistemi.Web.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpGet("register")]
-        public IActionResult Register() => View();
+        [HttpGet("RegisterAdmin")]
+        public IActionResult RegisterAdmin()
+        {
+            return View();
+        }
+
+        [HttpPost("Logout")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            // Oturumu sonlandır
+            await _signInManager.SignOutAsync();
+
+            // Giriş sayfasına yönlendir
+            return RedirectToAction("Login");
+        }
 
         [Authorize(Roles = "Admin")]
-        [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterViewModel model)
+        [HttpPost("RegisterAdmin")]
+        public async Task<IActionResult> RegisterAdmin(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = new Personnel
+                var admin = new Personnel
                 {
                     UserName = model.Email,
                     Email = model.Email,
@@ -140,14 +153,12 @@ namespace FabrikaYonetimSistemi.Web.Controllers
                     Surname = model.Surname
                 };
 
-                var result = await _userManager.CreateAsync(user, model.Password);
+                var result = await _userManager.CreateAsync(admin, model.Password);
 
                 if (result.Succeeded)
                 {
-
-                    await _userManager.AddToRoleAsync(user, "Personel");
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("index");
+                    await _userManager.AddToRoleAsync(admin, "Admin");
+                    return RedirectToAction("");
                 }
 
                 foreach (var error in result.Errors)
@@ -155,27 +166,57 @@ namespace FabrikaYonetimSistemi.Web.Controllers
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-            else
+
+            return RedirectToAction("");
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("RegisterPersonnel")]
+        public IActionResult RegisterPersonnel()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("RegisterPersonnel")]
+        public async Task<IActionResult> RegisterPersonnel(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
             {
-                Console.WriteLine("[Register] ModelState is invalid.");
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                var personnel = new Personnel
                 {
-                    Console.WriteLine($"[Register] ModelState error: {error.ErrorMessage}");
+                    UserName = model.Email,
+                    Email = model.Email,
+                    Name = model.Name,
+                    Surname = model.Surname
+                };
+
+                var result = await _userManager.CreateAsync(personnel, model.Password);
+
+                if (result.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(personnel, "Admin");
+                    return RedirectToAction("");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-            Console.WriteLine("[Register] Returning to registration view.");
-            return View(model);
+
+            return RedirectToAction("");
         }
 
         [Authorize(Roles = "Admin,Personel")]
-        [HttpGet("index")]
+        [HttpGet("")]
         public IActionResult Index()
         {
             return View();
         }
 
         [Authorize]
-        [HttpGet("accessdenied")]
+        [HttpGet("Accessdenied")]
         public async Task<IActionResult> AccessDenied()
         {
             return View();

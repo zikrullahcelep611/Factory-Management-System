@@ -108,5 +108,45 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             await _storageService.DeleteStorageAsync(storage);
             return NoContent();
         }
+
+        [HttpGet("AddStorageToBuilding/{buildingId}")]
+        public async Task<IActionResult> AddStorageToBuilding(int buildingId)
+        {
+            var building = await _buildingService.GetBuildingByIdAsync(buildingId);
+
+            if(building == null)
+            {
+                return NotFound("Bina bulunamadı");
+            }
+
+            ViewBag.BuildingId = buildingId;
+            ViewBag.BuildingName = building.Name;
+
+            return View();
+        }
+
+        [HttpPost("AddStorageToBuilding/{buildingId}")]
+        public async Task<IActionResult> AddStorageToBuilding(int buildingId, string storageName)
+        {
+            var building = await _buildingService.GetBuildingByIdAsync(buildingId);
+            if (string.IsNullOrEmpty(storageName))
+            {
+                ModelState.AddModelError("", "Depo adı boş olamaz");
+                ViewBag.BuildingId = buildingId;
+                ViewBag.BuildingName = building.Name;
+
+                return View();
+            }
+
+            var storage = new Storage
+            {
+                BuildingId = buildingId,
+                Name = storageName
+            };
+
+            await _storageService.AddStorageAsync(storage);
+
+            return Redirect($"/Building");
+        }
     }
 }

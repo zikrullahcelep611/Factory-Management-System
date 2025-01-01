@@ -118,4 +118,43 @@ public class BuildingController : Controller
             return NotFound(ex.Message);
         }
     }
+
+    [HttpGet("AddBuildingToFactory/{factoryId}")]
+    public async Task<IActionResult> AddBuildingToFactory(int factoryId)
+    {
+        // Fabrika kontrolü
+        var factory = await _factoryService.GetFactoryByIdAsync(factoryId);
+        if (factory == null)
+        {
+            return NotFound("Fabrika bulunamadı.");
+        }
+
+        ViewBag.FactoryId = factoryId;
+        ViewBag.FactoryName = factory.Name;
+        return View();
+    }
+
+    [HttpPost("AddBuildingToFactory/{factoryId}")]
+    public async Task<IActionResult> AddBuildingToFactory(int factoryId, string buildingName)
+    {
+        // Validasyon
+        if (string.IsNullOrEmpty(buildingName))
+        {
+            ModelState.AddModelError("", "Bina adı boş olamaz.");
+            ViewBag.FactoryId = factoryId;
+            ViewBag.FactoryName = (await _factoryService.GetFactoryByIdAsync(factoryId))?.Name;
+            return View();
+        }
+
+        // Yeni bina oluşturma
+        var building = new Building
+        {
+            FactoryId = factoryId,
+            Name = buildingName
+        };
+
+        await _buildingService.AddBuildingAsync(building);
+
+        return Redirect($"/Factory");
+    }
 }

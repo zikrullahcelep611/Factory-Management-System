@@ -21,6 +21,8 @@ namespace FabrikaYonetimSistemi.Service.Extensions
             services.AddScoped<IStorageService, StorageService>();
             services.AddScoped<IRepository<Storage>, Repository<Storage>>();
             services.AddScoped<IRepository<MaterialTransaction>, Repository<MaterialTransaction>>();
+            services.AddScoped<IRepository<MaterialRequest>, Repository<MaterialRequest>>();
+            services.AddScoped<IMaterialRequestService, MaterialRequestService>();
 
             services.AddScoped<IRepository<StorageMaterial>, Repository<StorageMaterial>>();
             services.AddScoped<IStorageMaterialService, StorageMaterialService>();

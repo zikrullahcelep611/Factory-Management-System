@@ -12,5 +12,7 @@ namespace FabrikaYonetimSistemi.Service.Services.Abstraction
         Task<IEnumerable<Storage>> GetAllStoragesWithMaterialAsync(int materialId);
         Task<IEnumerable<Material>> GetMaterialsByStorageIdAsync(int storageId);
         Task<IEnumerable<StorageMaterial>> GetStorageMaterialsByStorageIdAsync(int storageId);
+        
+        
     }
 }

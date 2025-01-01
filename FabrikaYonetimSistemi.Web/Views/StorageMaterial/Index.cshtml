@@ -59,6 +59,17 @@
                                     </button>
                                 </div>
                             </form>
+
+                            <!-- Malzeme Talep Et Formu -->
+                            <form action="/MaterialRequest/Create" method="post" class="d-inline">
+                                <input type="hidden" name="StorageMaterialId" value="@storageMaterial.Id" />
+                                <div class="input-group input-group-sm" style="max-width: 200px;">
+                                    <input type="number" name="Quantity" class="form-control" placeholder="Miktar" required style="width: 80px;" />
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-envelope-plus"></i> Talep Et
+                                    </button>
+                                </div>
+                            </form>
                         </td>
                         <td class="text-center">
                             <a href="/StorageMaterial/MaterialList/@storageMaterial.StorageId" class="btn btn-info btn-sm">

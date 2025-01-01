@@ -178,3 +178,6 @@ C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistem
 C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Web\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Web\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Web\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Web\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Web\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
