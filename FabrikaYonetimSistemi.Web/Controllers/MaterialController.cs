@@ -1,9 +1,12 @@
 ﻿using FabrikaYonetimSistemi.Entity.Entities;
 using FabrikaYonetimSistemi.Service.Services.Abstraction;
+using FabrikaYonetimSistemi.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-[Route("material")]
-public class MaterialController : ControllerBase
+[Authorize(Roles = "Admin,Personel")]
+[Route("Material")]
+public class MaterialController : Controller
 {
     private readonly IMaterialService _materialService;
 
@@ -12,28 +15,27 @@ public class MaterialController : ControllerBase
         _materialService = materialService;
     }
 
-
-    [HttpGet]
-    public async Task<IActionResult> GetAllMaterials()
+    [HttpGet("")]
+    public async Task<IActionResult> Index()
     {
         var materials = await _materialService.GetAllMaterialsAsync();
-        return Ok(materials);
-    }
-
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetMaterialById(int id)
-    {
-        var material = await _materialService.GetMaterialByIdAsync(id);
-        if (material == null)
+        var materialViewModel = materials.Select(material => new MaterialViewModel
         {
-            return NotFound($"Material with ID {id} not found.");
-        }
-        return Ok(material);
+            Id = material.Id,
+            Name = material.Name
+        }).ToList();
+
+        return View(materialViewModel);
     }
 
+    [HttpGet("Add")]
+    public async Task<IActionResult> Add()
+    {
+        return View();
+    }
 
-    [HttpPost]
-    public async Task<IActionResult> AddMaterial([FromBody] Material material)
+    [HttpPost("Add")]
+    public async Task<IActionResult> Add(Material material)
     {
         if (material == null)
         {
@@ -41,73 +43,36 @@ public class MaterialController : ControllerBase
         }
 
         await _materialService.AddMaterialAsync(material);
-        return CreatedAtAction(nameof(GetMaterialById), new { id = material.Id }, material);
+        return RedirectToAction("");
     }
 
-
-    [HttpPut("{id}")]
-    public IActionResult UpdateMaterial(int id, [FromBody] Material material)
-    {
-        if (material == null || material.Id != id)
-        {
-            return BadRequest("Invalid material data.");
-        }
-
-        _materialService.UpdateMaterial(material);
-        return NoContent();
-    }
-
-
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteMaterial(int id)
+    [HttpGet("Update/{id}")]
+    public async Task<IActionResult> Update(int id)
     {
         var material = await _materialService.GetMaterialByIdAsync(id);
-        if (material == null)
-        {
-            return NotFound($"Material with ID {id} not found.");
-        }
 
-        await _materialService.DeleteMaterialAsync(id);
-        return NoContent();
+        return View(material);
     }
 
-
-    [HttpPatch("{id}/increase")]
-    public async Task<IActionResult> IncreaseMaterialQuantity(int id, [FromQuery] int amount)
+    [HttpPost("Update/{id}")]
+    public async Task<IActionResult> Update(Material material)
     {
-        if (amount <= 0)
+        if (ModelState.IsValid)
         {
-            return BadRequest("Amount must be greater than zero.");
+            _materialService.UpdateMaterial(material);
+            return RedirectToAction("");
         }
-
-        try
-        {
-            await _materialService.IncreaseMaterialQuantityAsync(id, amount);
-            return Ok($"Material quantity increased by {amount}.");
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+        
+        return View(material);
     }
 
-
-    [HttpPatch("{id}/reduce")]
-    public async Task<IActionResult> ReduceMaterialQuantity(int id, [FromQuery] int amount)
+    [HttpGet("Delete/{id}")]
+    public async Task<IActionResult> Delete(int id)
     {
-        if (amount <= 0)
-        {
-            return BadRequest("Amount must be greater than zero.");
-        }
+        var material = await _materialService.GetMaterialByIdAsync(id);
 
-        try
-        {
-            await _materialService.ReduceMaterialQuantityAsync(id, amount);
-            return Ok($"Material quantity reduced by {amount}.");
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+        await _materialService.DeleteMaterialAsync(material);
+        return RedirectToAction("");
     }
 }
+    

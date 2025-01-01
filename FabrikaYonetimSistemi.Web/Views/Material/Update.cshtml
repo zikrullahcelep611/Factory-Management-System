@@ -1,0 +1,35 @@
+﻿@model FabrikaYonetimSistemi.Entity.Entities.Material
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-white text-center">
+                    <h3>Malzeme Güncelle</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Update" asp-controller="Material" method="post" class="needs-validation" novalidate>
+                        <!-- Hidden ID Field -->
+                        <input type="hidden" asp-for="Id" />
+
+                        <!-- Name Field -->
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-bold">Malzeme Adı</label>
+                            <input asp-for="Name" class="form-control" placeholder="Malzeme adı girin." required />
+                            <div class="invalid-feedback">
+                                Lütfen bina adı giriniz.
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-warning">
+                                <i class="bi bi-pencil-square"></i> Malzeme Güncelle
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

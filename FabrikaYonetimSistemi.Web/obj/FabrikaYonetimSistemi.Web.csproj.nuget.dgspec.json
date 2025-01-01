@@ -119,7 +119,21 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
@@ -130,6 +144,18 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[7.0.0, )"
             }
@@ -203,6 +229,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -254,6 +286,9 @@
               "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj": {
                 "projectPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Core\\FabrikaYonetimSistemi.Core.csproj"
               },
+              "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj": {
+                "projectPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Data\\FabrikaYonetimSistemi.Data.csproj"
+              },
               "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj": {
                 "projectPath": "C:\\Users\\zikru\\Desktop\\.Net Projeleri\\FabrikaYonetimSistemi\\FabrikaYonetimSistemi.Entity\\FabrikaYonetimSistemi.Entity.csproj"
               }
@@ -276,6 +311,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -359,6 +398,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

@@ -34,3 +34,5 @@ C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistem
 C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\bin\Debug\net8.0\FabrikaYonetimSistemi.Entity.pdb
 C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\FabrikaY.A87B004E.Up2Date
 C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\obj\Debug\net8.0\ref\FabrikaYonetimSistemi.Service.dll
+C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\bin\Debug\net8.0\FabrikaYonetimSistemi.Data.dll
+C:\Users\zikru\Desktop\.Net Projeleri\FabrikaYonetimSistemi\FabrikaYonetimSistemi.Service\bin\Debug\net8.0\FabrikaYonetimSistemi.Data.pdb

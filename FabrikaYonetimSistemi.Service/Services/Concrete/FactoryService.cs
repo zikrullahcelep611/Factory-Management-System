@@ -1,4 +1,5 @@
 ﻿using FabrikaYonetimSistemi.Core.Repository;
+using FabrikaYonetimSistemi.Data.Abstraction;
 using FabrikaYonetimSistemi.Entity.Entities;
 using FabrikaYonetimSistemi.Service.Services.Abstraction;
 using Microsoft.EntityFrameworkCore;
@@ -67,5 +68,6 @@ namespace FabrikaYonetimSistemi.Service.Services.Concrete
 
             return factory.Buildings;
         }
+        
     }
 }

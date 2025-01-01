@@ -1,10 +1,12 @@
 ﻿using FabrikaYonetimSistemi.Entity.Entities;
 using FabrikaYonetimSistemi.Service.Services.Abstraction;
 using FabrikaYonetimSistemi.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FabrikaYonetimSistemi.Web.Controllers
 {
+    [Authorize(Roles = "Admin,Personel")]
     [Route("Storage")]
     public class StorageController : Controller
     {
@@ -32,7 +34,7 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             return View(storageViewModels);
         }
 
-        [HttpGet("add")]
+        [HttpGet("Add")]
         public async Task<IActionResult> Add()
         {
             var buildings = await _buildingService.GetAllBuildingsAsync();
@@ -42,7 +44,7 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             return View();
         }
 
-        [HttpPost("add")]
+        [HttpPost("Add")]
         public async Task<IActionResult> Add(Storage storage)
         {
             if(storage == null)
@@ -55,7 +57,7 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             return RedirectToAction("");
         }
 
-        [HttpGet("update/{id}")]
+        [HttpGet("Update/{id}")]
         public async Task<IActionResult> Update(int id)
         {
             var storage = await _storageService.GetStorageByIdAsync(id);
@@ -69,7 +71,7 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             return View(storage);
         }
 
-        [HttpPost("update/{id}")]
+        [HttpPost("Update/{id}")]
         public async Task<IActionResult> Update(Storage storage)
         {
             ModelState.Remove("Building");
@@ -95,7 +97,7 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             }
         }
 
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("Delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var storage = await _storageService.GetStorageByIdAsync(id);
@@ -105,6 +107,46 @@ namespace FabrikaYonetimSistemi.Web.Controllers
             }
             await _storageService.DeleteStorageAsync(storage);
             return NoContent();
+        }
+
+        [HttpGet("AddStorageToBuilding/{buildingId}")]
+        public async Task<IActionResult> AddStorageToBuilding(int buildingId)
+        {
+            var building = await _buildingService.GetBuildingByIdAsync(buildingId);
+
+            if(building == null)
+            {
+                return NotFound("Bina bulunamadı");
+            }
+
+            ViewBag.BuildingId = buildingId;
+            ViewBag.BuildingName = building.Name;
+
+            return View();
+        }
+
+        [HttpPost("AddStorageToBuilding/{buildingId}")]
+        public async Task<IActionResult> AddStorageToBuilding(int buildingId, string storageName)
+        {
+            var building = await _buildingService.GetBuildingByIdAsync(buildingId);
+            if (string.IsNullOrEmpty(storageName))
+            {
+                ModelState.AddModelError("", "Depo adı boş olamaz");
+                ViewBag.BuildingId = buildingId;
+                ViewBag.BuildingName = building.Name;
+
+                return View();
+            }
+
+            var storage = new Storage
+            {
+                BuildingId = buildingId,
+                Name = storageName
+            };
+
+            await _storageService.AddStorageAsync(storage);
+
+            return Redirect($"/Building");
         }
     }
 }

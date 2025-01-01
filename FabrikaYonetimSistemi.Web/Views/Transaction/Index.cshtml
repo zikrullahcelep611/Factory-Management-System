@@ -1,0 +1,53 @@
+﻿@model IEnumerable<FabrikaYonetimSistemi.Entity.Entities.MaterialTransaction>
+
+<div class="container mt-5">
+    <!-- Başlık ve Ekleme Butonu -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="text-primary">Malzeme İşlem Listesi</h1>
+    </div>
+
+    <!-- İşlem Tablosu -->
+    <table class="table table-striped table-hover table-responsive-md">
+        <thead class="table-success">
+            <tr>
+                <th>Id</th>
+                <th>Malzeme Adı</th>
+                <th>Kullanıcı</th>
+                <th>İşlem Tipi</th>
+                <th>Miktar</th>
+                <th>Tarih</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="7" class="text-center text-muted">Henüz herhangi bir işlem yapılmamıştır</td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var transactionMaterial in Model)
+                {
+                    <tr>
+                        <td>@transactionMaterial.Id</td>
+                        <td>@transactionMaterial.StorageMaterial.Material.Name</td>
+                        <td>@transactionMaterial.Personnel.Name</td>
+                        <td>
+                            @if (transactionMaterial.TransactionType == ActionType.Add)
+                            {
+                                <span class="badge bg-success">Ekleme</span>
+                            }
+                            else if (transactionMaterial.TransactionType == ActionType.Remove)
+                            {
+                                <span class="badge bg-danger">Silme</span>
+                            }
+                        </td>
+                        <td>@transactionMaterial.QuantityChange</td>
+                        <td>@transactionMaterial.TransactionDate.ToString("dd.MM.yyyy HH:mm")</td>  
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

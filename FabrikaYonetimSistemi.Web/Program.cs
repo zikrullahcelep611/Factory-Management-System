@@ -1,29 +1,55 @@
-using FabrikaYonetimSistemi.Core.Repository;
-using FabrikaYonetimSistemi.Data.Abstraction;
 using FabrikaYonetimSistemi.Data.DataContext;
 using FabrikaYonetimSistemi.Entity.Entities;
-using FabrikaYonetimSistemi.Service.Services.Abstraction;
-using FabrikaYonetimSistemi.Service.Services.Concrete;
+using FabrikaYonetimSistemi.Service.Extensions;
+using FabrikaYonetimSistemi.Service.Seed;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.LoadServiceLayerExtension();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(connectionString));
+{
+    options.UseSqlServer(connectionString);
+}
+);
 
-builder.Services.AddScoped<IBuildingService, BuildingService>();
-builder.Services.AddScoped<IRepository<Building>, Repository<Building>>();
-builder.Services.AddScoped<IFactoryService, FactoryService>();
-builder.Services.AddScoped<IRepository<Factory>, Repository<Factory>>();
-builder.Services.AddScoped<IStorageService, StorageService>();
-builder.Services.AddScoped<IRepository<Storage>, Repository<Storage>>();
+builder.Services.AddIdentity<Personnel, IdentityRole<int>>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 6;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.SignIn.RequireConfirmedEmail = false;
+});
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+});
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+// Seed iþlemini gerçekleþtirin
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    await DataInitializer.SeedRolesAndAdminUser(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -39,6 +65,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

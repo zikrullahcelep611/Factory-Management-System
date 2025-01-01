@@ -1,9 +1,11 @@
 ﻿using FabrikaYonetimSistemi.Entity.Entities;
 using FabrikaYonetimSistemi.Service.Services.Abstraction;
 using FabrikaYonetimSistemi.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-[Route("building")]
+[Authorize(Roles = "Admin,Personel")]
+[Route("Building")]
 public class BuildingController : Controller
 {
     private readonly IBuildingService _buildingService;
@@ -30,7 +32,7 @@ public class BuildingController : Controller
         return View(buildingViewModels);
     }
 
-    [HttpGet("add")]
+    [HttpGet("Add")]
     public async Task<IActionResult> Add()
     {
         var factories = await _factoryService.GetAllFactoriesAsync();
@@ -40,7 +42,7 @@ public class BuildingController : Controller
         return View();
     }
 
-    [HttpPost("add")]
+    [HttpPost("Add")]
     public async Task<IActionResult> Add(Building building)
     {
         if (building == null)
@@ -60,7 +62,7 @@ public class BuildingController : Controller
         return RedirectToAction("");
     }
 
-    [HttpGet("update/{id}")]
+    [HttpGet("Update/{id}")]
     public async Task<IActionResult> Update(int id)
     {
         var building = await _buildingService.GetBuildingByIdAsync(id);
@@ -72,7 +74,7 @@ public class BuildingController : Controller
         return View(building);
     }
 
-    [HttpPost("update/{id}")]
+    [HttpPost("Update/{id}")]
     public async Task<IActionResult> Update(Building building)
     {
         ModelState.Remove("Factory");
@@ -86,7 +88,7 @@ public class BuildingController : Controller
         return View(building);
     }
 
-    [HttpDelete("delete/{id}")]
+    [HttpDelete("Delete/{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         var building = await _buildingService.GetBuildingByIdAsync(id);
@@ -97,5 +99,62 @@ public class BuildingController : Controller
 
         _buildingService.DeleteBuilding(building);
         return NoContent();
+    }
+
+    [HttpGet("Storages/{buildingId}")]
+    public async Task<IActionResult> ListStorages(int buildingId)
+    {
+        try
+        {
+            var storages = await _buildingService.GetStoragesByBuildingIdAsync(buildingId);
+
+            if (storages == null || !storages.Any())
+                return NotFound($"No storages found for Building Id {buildingId}");
+
+            return View(storages);
+        }
+        catch(KeyNotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
+    }
+
+    [HttpGet("AddBuildingToFactory/{factoryId}")]
+    public async Task<IActionResult> AddBuildingToFactory(int factoryId)
+    {
+        // Fabrika kontrolü
+        var factory = await _factoryService.GetFactoryByIdAsync(factoryId);
+        if (factory == null)
+        {
+            return NotFound("Fabrika bulunamadı.");
+        }
+
+        ViewBag.FactoryId = factoryId;
+        ViewBag.FactoryName = factory.Name;
+        return View();
+    }
+
+    [HttpPost("AddBuildingToFactory/{factoryId}")]
+    public async Task<IActionResult> AddBuildingToFactory(int factoryId, string buildingName)
+    {
+        // Validasyon
+        if (string.IsNullOrEmpty(buildingName))
+        {
+            ModelState.AddModelError("", "Bina adı boş olamaz.");
+            ViewBag.FactoryId = factoryId;
+            ViewBag.FactoryName = (await _factoryService.GetFactoryByIdAsync(factoryId))?.Name;
+            return View();
+        }
+
+        // Yeni bina oluşturma
+        var building = new Building
+        {
+            FactoryId = factoryId,
+            Name = buildingName
+        };
+
+        await _buildingService.AddBuildingAsync(building);
+
+        return Redirect($"/Factory");
     }
 }

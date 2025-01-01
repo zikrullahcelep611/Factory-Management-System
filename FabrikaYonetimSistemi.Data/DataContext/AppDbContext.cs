@@ -1,10 +1,17 @@
 ﻿using FabrikaYonetimSistemi.Entity.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FabrikaYonetimSistemi.Data.DataContext
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<Personnel, IdentityRole<int>, int>
     {
+        public AppDbContext()
+        {
+            
+        }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
             
@@ -16,6 +23,8 @@ namespace FabrikaYonetimSistemi.Data.DataContext
         public DbSet<Personnel> Personnels { get; set; }
         public DbSet<Material> Materials { get; set; }
         public DbSet<MaterialTransaction> MaterialTransactions { get; set; }
+        public DbSet<StorageMaterial> StorageMaterial { get; set; }
+        public DbSet<MaterialRequest> MaterialRequests { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,15 +37,6 @@ namespace FabrikaYonetimSistemi.Data.DataContext
             modelBuilder.Entity<Building>()
                 .HasMany(b => b.Storages).WithOne(s => s.Building)
                 .HasForeignKey(s => s.BuildingId);
-
-           /* modelBuilder.Entity<MaterialTransaction>()
-                .HasOne(mt => mt.Material).WithMany(m => m.MaterialTransactions)
-                .HasForeignKey(m => m.MaterialId);
-
-            modelBuilder.Entity<MaterialTransaction>()
-                .HasOne(mt => mt.Personnel)
-                .WithMany(p => p.MaterialTransactions)
-                .HasForeignKey(mt => mt.PersonelId);*/
         }
     }
 }
