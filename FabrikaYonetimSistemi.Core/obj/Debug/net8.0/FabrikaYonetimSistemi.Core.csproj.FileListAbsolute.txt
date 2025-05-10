@@ -1,0 +1,35 @@
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.deps.json
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.dll
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.pdb
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.AssemblyInfoInputs.cache
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.AssemblyInfo.cs
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.csproj.CoreCompileInputs.cache
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.sourcelink.json
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.dll
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/refint/FabrikaYonetimSistemi.Core.dll
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.pdb
+C:/Users/zikru/Desktop/DotNET Projects/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/ref/FabrikaYonetimSistemi.Core.dll
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.deps.json
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.dll
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.pdb
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.AssemblyInfoInputs.cache
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.AssemblyInfo.cs
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.csproj.CoreCompileInputs.cache
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.sourcelink.json
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.dll
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/refint/FabrikaYonetimSistemi.Core.dll
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.pdb
+C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/ref/FabrikaYonetimSistemi.Core.dll
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.deps.json
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.dll
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.pdb
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.AssemblyInfoInputs.cache
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.AssemblyInfo.cs
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.csproj.CoreCompileInputs.cache
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.dll
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/refint/FabrikaYonetimSistemi.Core.dll
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.pdb
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/ref/FabrikaYonetimSistemi.Core.dll

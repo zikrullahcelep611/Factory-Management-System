@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FabrikaYonetimSistemi.Web
+build_property.RootNamespace = FabrikaYonetimSistemi.Web
+build_property.ProjectDir = /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9BY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Account/RegisterAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3RlckFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Account/RegisterPersonnel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3RlclBlcnNvbm5lbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Building/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnVpbGRpbmcvQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Building/AddBuildingToFactory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnVpbGRpbmcvQWRkQnVpbGRpbmdUb0ZhY3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Building/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnVpbGRpbmcvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Building/ListStorages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnVpbGRpbmcvTGlzdFN0b3JhZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Building/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnVpbGRpbmcvVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Factory/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdG9yeS9BZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Factory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdG9yeS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Factory/ListBuildings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdG9yeS9MaXN0QnVpbGRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Factory/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdG9yeS9VcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Material/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWF0ZXJpYWwvQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Material/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWF0ZXJpYWwvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Material/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWF0ZXJpYWwvVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/MaterialRequest/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWF0ZXJpYWxSZXF1ZXN0L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Storage/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvcmFnZS9BZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Storage/AddStorageToBuilding.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvcmFnZS9BZGRTdG9yYWdlVG9CdWlsZGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Storage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvcmFnZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Storage/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvcmFnZS9VcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/StorageMaterial/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvcmFnZU1hdGVyaWFsL0FkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/StorageMaterial/AddMaterial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvcmFnZU1hdGVyaWFsL0FkZE1hdGVyaWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/StorageMaterial/AddMaterialToStorage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvcmFnZU1hdGVyaWFsL0FkZE1hdGVyaWFsVG9TdG9yYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/StorageMaterial/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvcmFnZU1hdGVyaWFsL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/StorageMaterial/ListMaterialsInStorage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RvcmFnZU1hdGVyaWFsL0xpc3RNYXRlcmlhbHNJblN0b3JhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Transaction/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb24vQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Transaction/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb24vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kzhl9wkwsd

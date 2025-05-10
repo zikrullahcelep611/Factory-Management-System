@@ -1,0 +1,379 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/FabrikaYonetimSistemi.Web.csproj": {}
+  },
+  "projects": {
+    "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/FabrikaYonetimSistemi.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/FabrikaYonetimSistemi.Core.csproj",
+        "projectName": "FabrikaYonetimSistemi.Core",
+        "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/FabrikaYonetimSistemi.Core.csproj",
+        "packagesPath": "/home/zikrullah/.nuget/packages/",
+        "outputPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zikrullah/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/FabrikaYonetimSistemi.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/FabrikaYonetimSistemi.Data.csproj",
+        "projectName": "FabrikaYonetimSistemi.Data",
+        "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/FabrikaYonetimSistemi.Data.csproj",
+        "packagesPath": "/home/zikrullah/.nuget/packages/",
+        "outputPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zikrullah/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/FabrikaYonetimSistemi.Entity.csproj": {
+                "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/FabrikaYonetimSistemi.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/FabrikaYonetimSistemi.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/FabrikaYonetimSistemi.Entity.csproj",
+        "projectName": "FabrikaYonetimSistemi.Entity",
+        "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/FabrikaYonetimSistemi.Entity.csproj",
+        "packagesPath": "/home/zikrullah/.nuget/packages/",
+        "outputPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zikrullah/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/FabrikaYonetimSistemi.Core.csproj": {
+                "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/FabrikaYonetimSistemi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/FabrikaYonetimSistemi.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/FabrikaYonetimSistemi.Service.csproj",
+        "projectName": "FabrikaYonetimSistemi.Service",
+        "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/FabrikaYonetimSistemi.Service.csproj",
+        "packagesPath": "/home/zikrullah/.nuget/packages/",
+        "outputPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zikrullah/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/FabrikaYonetimSistemi.Core.csproj": {
+                "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/FabrikaYonetimSistemi.Core.csproj"
+              },
+              "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/FabrikaYonetimSistemi.Data.csproj": {
+                "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/FabrikaYonetimSistemi.Data.csproj"
+              },
+              "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/FabrikaYonetimSistemi.Entity.csproj": {
+                "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/FabrikaYonetimSistemi.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.8.31, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/FabrikaYonetimSistemi.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/FabrikaYonetimSistemi.Web.csproj",
+        "projectName": "FabrikaYonetimSistemi.Web",
+        "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/FabrikaYonetimSistemi.Web.csproj",
+        "packagesPath": "/home/zikrullah/.nuget/packages/",
+        "outputPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zikrullah/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/FabrikaYonetimSistemi.Data.csproj": {
+                "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/FabrikaYonetimSistemi.Data.csproj"
+              },
+              "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/FabrikaYonetimSistemi.Service.csproj": {
+                "projectPath": "/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/FabrikaYonetimSistemi.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

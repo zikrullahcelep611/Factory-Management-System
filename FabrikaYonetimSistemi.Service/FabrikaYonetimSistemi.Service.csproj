@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.31" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FabrikaYonetimSistemi.Core\FabrikaYonetimSistemi.Core.csproj" />
+    <ProjectReference Include="..\FabrikaYonetimSistemi.Data\FabrikaYonetimSistemi.Data.csproj" />
+    <ProjectReference Include="..\FabrikaYonetimSistemi.Entity\FabrikaYonetimSistemi.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

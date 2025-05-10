@@ -1,0 +1,57 @@
+﻿@model FabrikaYonetimSistemi.Entity.Entities.Building
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-white text-center">
+                    <h3>Bina Güncelle</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Update" asp-controller="Building" method="post" class="needs-validation" novalidate>
+                        <!-- Hidden ID Field -->
+                        <input type="hidden" asp-for="Id" />
+
+                        <!-- Name Field -->
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-bold">Bina Adı</label>
+                            <input asp-for="Name" class="form-control" placeholder="Enter building name" required />
+                            <div class="invalid-feedback">
+                                Lütfen bina adı giriniz.
+                            </div>
+                        </div>
+
+                        <!-- Factory Selection -->
+                        <div class="mb-3">
+                            <label for="factorySelect" class="form-label fw-bold">Fabrika Seç</label>
+                            <select class="form-select" id="factorySelect" asp-for="FactoryId" required>
+                                <option value="" disabled>-- Fabrika Seç --</option>
+                                @foreach (var factory in ViewBag.Factories)
+                                {
+                                    if (factory.Id == Model.FactoryId)
+                                    {
+                                        <option value="@factory.Id" selected>@factory.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@factory.Id">@factory.Name</option>
+                                    }
+                                }
+                            </select>
+                            <div class="invalid-feedback">
+                                Lütfen fabrika seçiniz.
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-warning">
+                                <i class="bi bi-pencil-square"></i> Bina Güncelle
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

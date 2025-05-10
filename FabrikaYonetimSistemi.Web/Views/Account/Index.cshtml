@@ -1,0 +1,146 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envanter Yönetim Sistemi - Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-color: #343a40;
+            color: white;
+            padding-top: 1rem;
+            overflow-y: auto;
+        }
+
+            .sidebar a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 10px 15px;
+                border-radius: 4px;
+                transition: all 0.3s ease-in-out;
+            }
+
+                .sidebar a:hover {
+                    background-color: #495057;
+                }
+
+                .sidebar a i {
+                    margin-right: 10px;
+                }
+
+        .dropdown-buttons {
+            display: none;
+            margin-left: 15px;
+        }
+
+            .dropdown-buttons a {
+                display: block;
+                margin-top: 5px;
+            }
+
+        .content {
+            margin-right: 250px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h4 class="text-center mb-4">Envanter Yönetimi</h4>
+        <a href="/Factory"><i class="fas fa-industry"></i> Fabrikalar</a>
+        <a href="/Building"><i class="fas fa-building"></i> Binalar</a>
+        <a href="/Storage"><i class="fas fa-warehouse"></i> Depolar</a>
+        <a href="/material"><i class="fas fa-box"></i> Malzemeler</a>
+        <a href="/StorageMaterial"><i class="fas fa-boxes"></i> Depodaki Malzemeler</a> 
+        <a href="/Transaction"><i class="fas fa-history"></i> İşlem Listesi</a>
+        <hr class="bg-secondary">
+        <a href="/profile"><i class="fas fa-user"></i> Profil</a>
+        <!-- Kullanıcı Ekle -->
+        <a href="javascript:void(0);" id="toggleDropdown"><i class="fas fa-user-plus"></i> Kullanıcı Ekle</a>
+        <div class="dropdown-buttons" id="dropdownButtons">
+            <a href="/Account/RegisterAdmin" class="btn btn-secondary btn-sm"><i class="fas fa-user-shield"></i> Admin Ekle</a>
+            <a href="/Account/RegisterPersonnel" class="btn btn-secondary btn-sm"><i class="fas fa-user"></i> Personel Ekle</a>
+        </div>
+        <hr class="bg-secondary">
+        <!-- Talepler -->
+        <a href="/MaterialRequest/Index"><i class="fas fa-tasks"></i> Talepler</a>
+        <hr class="bg-secondary">
+        <!-- Çıkış Yap -->
+        <form asp-action="Logout" method="post" class="d-inline">
+            <button type="submit" class="btn btn-link text-white p-3" style="text-decoration: none;">
+                <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+            </button>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1 class="text-primary">Hoş Geldiniz!</h1>
+        <p class="lead">Bu panelden envanter yönetim işlemlerini gerçekleştirebilirsiniz.</p>
+        <div class="row">
+            <!-- Example Dashboard Cards -->
+            <div class="col-md-4">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Toplam Fabrika</h5>
+                        <p class="card-text">10</p>
+                        <a href="/factories" class="btn btn-light btn-sm">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Toplam Bina</h5>
+                        <p class="card-text">25</p>
+                        <a href="/buildings" class="btn btn-light btn-sm">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Toplam Depo</h5>
+                        <p class="card-text">15</p>
+                        <a href="/storages" class="btn btn-light btn-sm">Detaylar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('toggleDropdown').addEventListener('click', function () {
+            const dropdown = document.getElementById('dropdownButtons');
+            // Aç/Kapa mantığı
+            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
