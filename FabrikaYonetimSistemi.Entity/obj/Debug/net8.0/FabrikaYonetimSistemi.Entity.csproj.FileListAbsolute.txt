@@ -45,3 +45,4 @@ C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistem
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/obj/Debug/net8.0/FabrikaYonetimSistemi.Entity.pdb
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/obj/Debug/net8.0/ref/FabrikaYonetimSistemi.Entity.dll
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/obj/Debug/net8.0/FabrikaYonetimSistemi.Entity.csproj.CopyComplete
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Entity/obj/Debug/net8.0/FabrikaYonetimSistemi.Entity.sourcelink.json

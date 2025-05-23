@@ -33,3 +33,4 @@ C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistem
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/refint/FabrikaYonetimSistemi.Core.dll
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.pdb
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/ref/FabrikaYonetimSistemi.Core.dll
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Core/obj/Debug/net8.0/FabrikaYonetimSistemi.Core.sourcelink.json

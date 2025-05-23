@@ -55,3 +55,4 @@ C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistem
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/obj/Debug/net8.0/FabrikaYonetimSistemi.Service.pdb
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/obj/Debug/net8.0/ref/FabrikaYonetimSistemi.Service.dll
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/obj/Debug/net8.0/FabrikaYonetimSistemi.Service.csproj.CopyComplete
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Service/obj/Debug/net8.0/FabrikaYonetimSistemi.Service.sourcelink.json

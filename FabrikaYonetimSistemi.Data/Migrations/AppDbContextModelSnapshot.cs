@@ -44,7 +44,7 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
                     b.HasIndex("FactoryId");
 
-                    b.ToTable("Buildings");
+                    b.ToTable("Buildings", (string)null);
                 });
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Factory", b =>
@@ -69,7 +69,7 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Factories");
+                    b.ToTable("Factories", (string)null);
                 });
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Material", b =>
@@ -89,7 +89,7 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Materials");
+                    b.ToTable("Materials", (string)null);
                 });
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.MaterialRequest", b =>
@@ -127,7 +127,7 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
                     b.HasIndex("StorageMaterialId");
 
-                    b.ToTable("MaterialRequests");
+                    b.ToTable("MaterialRequests", (string)null);
                 });
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.MaterialTransaction", b =>
@@ -162,7 +162,7 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
                     b.HasIndex("StorageMaterialId");
 
-                    b.ToTable("MaterialTransactions");
+                    b.ToTable("MaterialTransactions", (string)null);
                 });
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.Personnel", b =>
@@ -265,7 +265,7 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
                     b.HasIndex("BuildingId");
 
-                    b.ToTable("Storages");
+                    b.ToTable("Storages", (string)null);
                 });
 
             modelBuilder.Entity("FabrikaYonetimSistemi.Entity.Entities.StorageMaterial", b =>
@@ -294,7 +294,7 @@ namespace FabrikaYonetimSistemi.Data.Migrations
 
                     b.HasIndex("StorageId");
 
-                    b.ToTable("StorageMaterials");
+                    b.ToTable("StorageMaterials", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>

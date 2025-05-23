@@ -275,3 +275,4 @@ C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistem
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/obj/Debug/net8.0/FabrikaYonetimSistemi.Web.csproj.CopyComplete
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
 /home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/bin/Debug/net8.0/StackExchange.Redis.dll
+/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Web/obj/Debug/net8.0/FabrikaYonetimSistemi.Web.sourcelink.json
