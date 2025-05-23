@@ -38,23 +38,3 @@ C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistem
 C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaY.EE2D7701.Up2Date
 C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.genruntimeconfig.cache
 C:/Users/zikru/Desktop/.Net Projeleri/FabrikaYonetimSistemi/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/ref/FabrikaYonetimSistemi.Data.dll
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/bin/Debug/net8.0/FabrikaYonetimSistemi.Data.deps.json
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/bin/Debug/net8.0/FabrikaYonetimSistemi.Data.runtimeconfig.json
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/bin/Debug/net8.0/FabrikaYonetimSistemi.Data.dll
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/bin/Debug/net8.0/FabrikaYonetimSistemi.Data.pdb
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.dll
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/bin/Debug/net8.0/FabrikaYonetimSistemi.Entity.dll
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/bin/Debug/net8.0/FabrikaYonetimSistemi.Entity.pdb
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/bin/Debug/net8.0/FabrikaYonetimSistemi.Core.pdb
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.csproj.AssemblyReference.cache
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.GeneratedMSBuildEditorConfig.editorconfig
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.AssemblyInfoInputs.cache
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.AssemblyInfo.cs
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.csproj.CoreCompileInputs.cache
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.dll
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/refint/FabrikaYonetimSistemi.Data.dll
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.pdb
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.genruntimeconfig.cache
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/ref/FabrikaYonetimSistemi.Data.dll
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.csproj.CopyComplete
-/home/zikrullah/Documents/Projects/Factory-Management-System-master/FabrikaYonetimSistemi.Data/obj/Debug/net8.0/FabrikaYonetimSistemi.Data.sourcelink.json
